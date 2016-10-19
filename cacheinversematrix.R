@@ -1,3 +1,8 @@
+## makeCacheMatrix creates a list containing functions to:
+##set the value of the matrix
+##get the value of the matrix
+##set the value of the inverse
+##get the value of the mean
 makeCacheMatrix <- function(x = matrix()) {
   i <- NULL
   set <- function(y) {
@@ -11,6 +16,9 @@ makeCacheMatrix <- function(x = matrix()) {
        setinverse = setinverse,
        getinverse = getinverse)
 }
+## The following function calculates the inverse of the matrix 
+## using the previous function.
+## Return a matrix that is the inverse of 'x'
 
 cacheSolve <- function(x, ...) {
   i <- x$getinverse()
